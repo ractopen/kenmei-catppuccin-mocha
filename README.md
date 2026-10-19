@@ -9,6 +9,7 @@
 <p>
   <a href="https://github.com/ractopen/kenmei-catppuccin-mocha/releases"><img src="https://img.shields.io/badge/version-0.0.1-cba6f7?style=for-the-badge&labelColor=181825" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-89b4fa?style=for-the-badge&labelColor=181825" alt="License"></a>
+  <a href="https://greasyfork.org/en/scripts/601110-kenmei-catppuccin-mocha-pixel-hud"><img src="https://img.shields.io/badge/Greasy%20Fork-601110-cba6f7?style=for-the-badge&labelColor=181825" alt="Greasy Fork"></a>
   <a href="https://raw.githubusercontent.com/ractopen/kenmei-catppuccin-mocha/main/kenmei-catppuccin-mocha.user.js"><img src="https://img.shields.io/badge/install-userscript-a6e3a1?style=for-the-badge&labelColor=181825" alt="Install"></a>
   <a href="https://github.com/catppuccin/catppuccin"><img src="https://img.shields.io/badge/palette-Catppuccin%20Mocha-fab387?style=for-the-badge&labelColor=181825" alt="Catppuccin Mocha"></a>
 </p>
@@ -51,8 +52,11 @@
 
 ## Installation
 
-### Violentmonkey / Tampermonkey
+### Method 1: Greasy Fork (Recommended)
+Install directly from Greasy Fork with automatic updates:
+**[Install from Greasy Fork](https://greasyfork.org/en/scripts/601110-kenmei-catppuccin-mocha-pixel-hud)**
 
+### Method 2: Direct Userscript
 1. Ensure [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) is installed in your browser.
 2. Click here to install: **[kenmei-catppuccin-mocha.user.js](https://raw.githubusercontent.com/ractopen/kenmei-catppuccin-mocha/main/kenmei-catppuccin-mocha.user.js)**.
 3. Confirm the installation in your userscript manager.

@@ -33,7 +33,13 @@
 
 ## Installation Methods
 
-### Violentmonkey (Recommended)
+### Greasy Fork (Recommended)
+
+1. Open the [Greasy Fork script page](https://greasyfork.org/en/scripts/601110-kenmei-catppuccin-mocha-pixel-hud).
+2. Click **Install this script**.
+3. Confirm installation in Violentmonkey / Tampermonkey. Userscript managers will automatically check Greasy Fork for updates.
+
+### Violentmonkey Direct
 
 1. Add the [Violentmonkey extension](https://violentmonkey.github.io/) to your browser.
 2. Open the direct script URL:

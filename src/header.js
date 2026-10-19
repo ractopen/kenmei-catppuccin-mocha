@@ -11,4 +11,6 @@
 // @license      MIT
 // @homepageURL  https://github.com/ractopen/kenmei-catppuccin-mocha
 // @supportURL   https://github.com/ractopen/kenmei-catppuccin-mocha/issues
+// @updateURL    https://greasyfork.org/scripts/601110-kenmei-catppuccin-mocha-pixel-hud/code/Kenmei%20-%20Catppuccin%20Mocha%20Pixel%20HUD.meta.js
+// @downloadURL  https://greasyfork.org/scripts/601110-kenmei-catppuccin-mocha-pixel-hud/code/Kenmei%20-%20Catppuccin%20Mocha%20Pixel%20HUD.user.js
 // ==/UserScript==

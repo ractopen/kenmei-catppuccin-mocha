@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kenmei - Catppuccin Mocha Pixel HUD
 // @namespace    https://github.com/ractopen/kenmei-catppuccin-mocha
-// @version      1.0.0
+// @version      0.0.1
 // @description  Catppuccin Mocha Pixel HUD theme for Kenmei with sharp geometry and retro monospace typography.
 // @author       ractopen
 // @match        https://www.kenmei.co/*

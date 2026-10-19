@@ -7,7 +7,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/ractopen/kenmei-catppuccin-mocha/releases"><img src="https://img.shields.io/badge/version-1.0.0-cba6f7?style=for-the-badge&labelColor=181825" alt="Version"></a>
+  <a href="https://github.com/ractopen/kenmei-catppuccin-mocha/releases"><img src="https://img.shields.io/badge/version-0.0.1-cba6f7?style=for-the-badge&labelColor=181825" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-89b4fa?style=for-the-badge&labelColor=181825" alt="License"></a>
   <a href="https://raw.githubusercontent.com/ractopen/kenmei-catppuccin-mocha/main/kenmei-catppuccin-mocha.user.js"><img src="https://img.shields.io/badge/install-userscript-a6e3a1?style=for-the-badge&labelColor=181825" alt="Install"></a>
   <a href="https://github.com/catppuccin/catppuccin"><img src="https://img.shields.io/badge/palette-Catppuccin%20Mocha-fab387?style=for-the-badge&labelColor=181825" alt="Catppuccin Mocha"></a>

@@ -1,110 +1,132 @@
-# Kenmei Catppuccin Mocha Documentation
+<div align="center">
 
-Detailed setup instructions, architecture breakdown, and configuration options.
+# Documentation
 
----
+<p>
+  <strong>Comprehensive guide, technical architecture, and customization manual.</strong>
+</p>
+
+<p>
+  <a href="../README.md"><img src="https://img.shields.io/badge/back%20to-overview-cba6f7?style=for-the-badge&labelColor=181825" alt="Overview"></a>
+  <a href="../LICENSE"><img src="https://img.shields.io/badge/license-MIT-89b4fa?style=for-the-badge&labelColor=181825" alt="License"></a>
+</p>
+
+</div>
+
+<br>
 
 ## Table of Contents
 
-- [Installation](#installation)
-  - [Violentmonkey](#violentmonkey)
+- [Installation Methods](#installation-methods)
+  - [Violentmonkey (Recommended)](#violentmonkey-recommended)
   - [Tampermonkey](#tampermonkey)
-  - [Firefox Native (userContent.css)](#firefox-native-usercontentcss)
-- [Architecture & Source Layout](#architecture--source-layout)
+  - [Firefox Native userContent.css](#firefox-native-usercontentcss)
+- [Visual Showcase](#visual-showcase)
 - [Design Tokens](#design-tokens)
+- [Architecture & Source Tree](#architecture--source-tree)
 - [Customization](#customization)
-  - [Changing Fonts](#changing-fonts)
-  - [Modifying Shadow Depth](#modifying-shadow-depth)
+  - [Fonts Configuration](#fonts-configuration)
+  - [Pixel Shadows](#pixel-shadows)
 - [Troubleshooting](#troubleshooting)
 
 ---
 
-## Installation
+## Installation Methods
 
-### Violentmonkey
+### Violentmonkey (Recommended)
 
-1. Install the [Violentmonkey extension](https://violentmonkey.github.io/) in Firefox, Chrome, or your preferred browser.
-2. Click on the raw script link:
+1. Add the [Violentmonkey extension](https://violentmonkey.github.io/) to your browser.
+2. Open the direct script URL:
    `https://raw.githubusercontent.com/ractopen/kenmei-catppuccin-mocha/main/kenmei-catppuccin-mocha.user.js`
-3. Violentmonkey will prompt you to confirm the installation.
-4. Click **Confirm installation**.
-5. Reload [kenmei.co/dashboard](https://www.kenmei.co/dashboard).
+3. Click **Confirm installation**.
+4. Open [kenmei.co/dashboard](https://www.kenmei.co/dashboard).
 
 ### Tampermonkey
 
 1. Open the Tampermonkey dashboard.
 2. Select the **Utilities** tab.
-3. Paste the raw script URL into the **Install from URL** field and click **Install**.
+3. Paste the raw script link into the **Install from URL** field and click **Install**.
 
-### Firefox Native (userContent.css)
+### Firefox Native userContent.css
 
-If you prefer applying styles natively without a userscript manager:
+To apply styles directly within Firefox without any userscript manager:
 
-1. Open your Firefox profile directory (`about:support` -> Profile Folder).
-2. Locate or create the `chrome` directory.
-3. Append the contents of `src/styles/` inside a domain wrapper in `userContent.css`:
+1. Navigate to `about:support` in Firefox and click **Open Directory** next to Profile Folder.
+2. Enter the `chrome` subfolder (create it if missing).
+3. Open or create `userContent.css`.
+4. Wrap the CSS content from `src/styles/*.css` within a domain selector:
 
 ```css
 @-moz-document domain("kenmei.co") {
-  /* Paste combined styles from src/styles/*.css here */
+  /* Insert contents from src/styles/*.css here */
 }
 ```
 
-4. Ensure `toolkit.legacyUserProfileCustomizations.stylesheets` is set to `true` in `about:config`.
-5. Restart Firefox.
+5. Go to `about:config`, toggle `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
+6. Restart Firefox.
 
 ---
 
-## Architecture & Source Layout
+## Visual Showcase
 
-The repository maintains an unbundled source tree under `src/` to make review and targeted maintenance straightforward:
+<div align="center">
+  <img src="../assets/dashboard.png" width="100%" alt="Dashboard View">
+  <br><br>
+  <img src="../assets/search-modal.png" width="100%" alt="Search Modal">
+</div>
+
+---
+
+## Design Tokens
+
+All elements map to the official Catppuccin Mocha palette:
+
+| Token Name | Hex Value | Semantic Role in Kenmei |
+| :--- | :--- | :--- |
+| **Base** | `#1e1e2e` | Main page canvas background, modal surfaces |
+| **Mantle** | `#181825` | Top navigation bar, card backgrounds, filter bars |
+| **Crust** | `#11111b` | Stepped pixel drop-shadows, high-contrast badges |
+| **Surface0** | `#313244` | Card outlines, hovered items, table borders |
+| **Surface1** | `#45475a` | Standard button borders, input borders |
+| **Surface2** | `#585b70` | Focus rings, shortcut badges (`kbd`) |
+| **Text** | `#cdd6f4` | Primary text and headings |
+| **Subtext0** | `#a6adc8` | Descriptions, time ago indicators, timestamps |
+| **Subtext1** | `#bac2de` | Navigation links, secondary metadata |
+| **Mauve** | `#cba6f7` | Primary buttons (`+ Add Manga`), active tabs, badges |
+| **Green** | `#a6e3a1` | Read status checkmark badge, success highlights |
+| **Peach** | `#fab387` | Notification indicators, score counters |
+| **Blue** | `#89b4fa` | Anchor links, information chips |
+
+---
+
+## Architecture & Source Tree
+
+The project separates concerns into modular components under `src/`:
 
 ```
 src/
 ├── header.js           # Userscript metadata block
 ├── injector.js         # GM_addStyle wrapper with DOM fallback
-├── observer.js         # MutationObserver enforcing .dark state
-├── index.js            # Runtime coordinator
+├── observer.js         # MutationObserver keeping .dark enforced
+├── index.js            # Entrypoint runtime coordinator
 └── styles/
-    ├── tokens.css      # Catppuccin Mocha variables & Kenmei token bindings
-    ├── base.css        # Geometry resets, typography, and scrollbars
+    ├── tokens.css      # Catppuccin Mocha palette & CSS custom property overrides
+    ├── base.css        # Zero-radius geometry, typography, and scrollbars
     ├── navigation.css  # Top navigation bar, search trigger, and avatars
     ├── filters.css     # Filter controls, list search input, and checkboxes
     ├── cards.css       # Grid items, covers, status indicators, and badges
     └── overlays.css    # Modals, menus, dropdowns, and toast alerts
 ```
 
-`build.js` concatenates these components into `kenmei-catppuccin-mocha.user.js` at the repository root.
-
----
-
-## Design Tokens
-
-All colors follow the official Catppuccin Mocha palette:
-
-| Token Name | Hex Value | Usage |
-| :--- | :--- | :--- |
-| Base | `#1e1e2e` | Main page canvas background, modal surfaces |
-| Mantle | `#181825` | Navigation bar, card backgrounds, dropdown panels |
-| Crust | `#11111b` | Drop shadows, deep contrast elements |
-| Surface0 | `#313244` | Card outlines, secondary hover surfaces |
-| Surface1 | `#45475a` | Input outlines, standard button borders |
-| Surface2 | `#585b70` | Focus outlines, muted badges |
-| Text | `#cdd6f4` | Primary text |
-| Subtext0 | `#a6adc8` | Secondary labels, descriptions |
-| Subtext1 | `#bac2de` | Navigation links, shortcut badges |
-| Mauve | `#cba6f7` | Primary action buttons, active indicators, focus rings |
-| Green | `#a6e3a1` | Completed / read status checkmarks |
-| Peach | `#fab387` | Notification indicators, score counters |
-| Blue | `#89b4fa` | Secondary links and info badges |
+Running `npm run build` executes `build.js`, which reads and bundles all modules into the root `kenmei-catppuccin-mocha.user.js`.
 
 ---
 
 ## Customization
 
-### Changing Fonts
+### Fonts Configuration
 
-By default, the theme checks for `Minecraft` and falls back to `Fira Code`. If you prefer standard monospace fonts, adjust `src/styles/base.css`:
+Default fonts prioritize `Minecraft` for retro headers and `Fira Code` for body copy. To customize fonts, modify `src/styles/base.css`:
 
 ```css
 h1, h2, h3, h4, h5, h6,
@@ -115,14 +137,16 @@ h1, h2, h3, h4, h5, h6,
 }
 ```
 
-Then run `npm run build` to update the root script.
+Rebuild via:
+```bash
+npm run build
+```
 
-### Modifying Shadow Depth
+### Pixel Shadows
 
-Shadow offsets are defined in `src/styles/cards.css` and `src/styles/overlays.css`. To adjust the retro stepped drop shadows:
+Pixel drop shadows are styled without blur to match pixel desktop themes:
 
 ```css
-/* Custom 2px retro stepped shadow */
 box-shadow: 2px 2px 0 0 var(--ctp-crust) !important;
 ```
 
@@ -130,8 +154,8 @@ box-shadow: 2px 2px 0 0 var(--ctp-crust) !important;
 
 ## Troubleshooting
 
-### White Flash During Initial Navigation
-The script uses `@run-at document-start` and immediately attaches the stylesheet to `document.documentElement` to prevent light-theme flashes. Ensure your userscript manager has full access to `kenmei.co`.
+### Light Mode Flashes
+The script runs at `@run-at document-start` and injects styles before DOM elements render. Verify that your userscript extension has permission to run on all `kenmei.co` pages.
 
-### Dark Mode Class Desynchronization
-Kenmei's Vue application manages dark mode dynamically. `src/observer.js` monitors class changes on `<html>` to maintain the `.dark` class across client-side route transitions.
+### Class Hydration
+Kenmei is a client-side Vue application that may toggle classes during route transitions. `src/observer.js` continuously ensures that the `dark` class remains assigned to `<html>`.

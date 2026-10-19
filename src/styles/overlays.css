@@ -1,0 +1,49 @@
+[data-slot="popover-content"],
+[role="menu"],
+[role="listbox"],
+.filter-popover {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  box-shadow: 0 -2px 0 0 var(--ctp-mauve), 0 2px 0 0 var(--ctp-mauve), -2px 0 0 0 var(--ctp-mauve), 2px 0 0 0 var(--ctp-mauve), 3px 3px 0 0 var(--ctp-crust) !important;
+  color: var(--ctp-text) !important;
+}
+
+[role="menuitem"],
+[role="option"],
+.menu-item {
+  font-family: "Fira Code", monospace !important;
+  font-size: 12.5px !important;
+  color: var(--ctp-text) !important;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+[role="menuitem"]:hover,
+[role="menuitem"]:focus,
+[role="option"]:hover,
+[role="option"][aria-selected="true"] {
+  background-color: var(--ctp-surface0) !important;
+  color: #ffffff !important;
+}
+
+[data-slot="dialog-content"],
+[role="dialog"],
+.dialogBox {
+  background-color: var(--ctp-base) !important;
+  border: 2px solid var(--ctp-mauve) !important;
+  box-shadow: 4px 4px 0 0 var(--ctp-crust) !important;
+  color: var(--ctp-text) !important;
+}
+
+[data-slot="dialog-overlay"],
+.backdrop-filter {
+  background-color: rgba(17, 17, 27, 0.85) !important;
+  backdrop-filter: blur(2px) !important;
+}
+
+[data-sonner-toast] {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-mauve) !important;
+  box-shadow: 3px 3px 0 0 var(--ctp-crust) !important;
+  color: var(--ctp-text) !important;
+  font-family: "Fira Code", monospace !important;
+}

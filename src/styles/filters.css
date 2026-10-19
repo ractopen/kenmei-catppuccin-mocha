@@ -1,0 +1,78 @@
+[data-slot="popover-trigger"],
+[data-slot="button"],
+button.border,
+button.filter {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+  font-family: "Fira Code", monospace !important;
+  box-shadow: 1px 1px 0 0 var(--ctp-crust) !important;
+  transition: all 0.15s ease;
+}
+
+[data-slot="popover-trigger"]:hover,
+[data-slot="button"]:hover,
+button.border:hover,
+button.filter:hover {
+  background-color: var(--ctp-surface0) !important;
+  border-color: var(--ctp-mauve) !important;
+  color: #ffffff !important;
+}
+
+button.bg-primary,
+[data-slot="button"][data-variant="default"],
+a.bg-primary {
+  background-color: var(--ctp-mauve) !important;
+  color: var(--ctp-crust) !important;
+  font-family: "Minecraft", "Fira Code", monospace !important;
+  font-weight: 700 !important;
+  border: 1px solid var(--ctp-mauve) !important;
+  box-shadow: 2px 2px 0 0 var(--ctp-crust) !important;
+}
+
+button.bg-primary:hover,
+[data-slot="button"][data-variant="default"]:hover,
+a.bg-primary:hover {
+  background-color: var(--ctp-lavender) !important;
+  border-color: var(--ctp-lavender) !important;
+  color: var(--ctp-crust) !important;
+}
+
+input[type="text"],
+input[type="search"],
+.input--visible input {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+  font-family: "Fira Code", monospace !important;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: var(--ctp-mauve) !important;
+  outline: none !important;
+  box-shadow: 0 -1px 0 0 var(--ctp-mauve), 0 1px 0 0 var(--ctp-mauve), -1px 0 0 0 var(--ctp-mauve), 1px 0 0 0 var(--ctp-mauve), 2px 2px 0 0 var(--ctp-crust) !important;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: var(--ctp-base) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  width: 14px;
+  height: 14px;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--ctp-mauve) !important;
+  border-color: var(--ctp-mauve) !important;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: var(--ctp-crust);
+}

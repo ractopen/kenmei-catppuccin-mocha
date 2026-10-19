@@ -1,0 +1,75 @@
+:root,
+html.dark,
+html {
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo:  #f2cdcd;
+  --ctp-pink:      #f5c2e7;
+  --ctp-mauve:     #cba6f7;
+  --ctp-red:       #f38ba8;
+  --ctp-maroon:    #eba0ac;
+  --ctp-peach:     #fab387;
+  --ctp-yellow:    #f9e2af;
+  --ctp-green:     #a6e3a1;
+  --ctp-teal:      #94e2d5;
+  --ctp-sky:       #89dceb;
+  --ctp-sapphire:  #74c7ec;
+  --ctp-blue:      #89b4fa;
+  --ctp-lavender:  #b4befe;
+  --ctp-text:      #cdd6f4;
+  --ctp-subtext1:  #bac2de;
+  --ctp-subtext0:  #a6adc8;
+  --ctp-overlay2:  #9399b2;
+  --ctp-overlay1:  #7f849c;
+  --ctp-overlay0:  #6c7086;
+  --ctp-surface2:  #585b70;
+  --ctp-surface1:  #45475a;
+  --ctp-surface0:  #313244;
+  --ctp-base:      #1e1e2e;
+  --ctp-mantle:    #181825;
+  --ctp-crust:     #11111b;
+
+  --background: var(--ctp-base) !important;
+  --foreground: var(--ctp-text) !important;
+  --card: var(--ctp-mantle) !important;
+  --card-foreground: var(--ctp-text) !important;
+  --popover: var(--ctp-mantle) !important;
+  --popover-foreground: var(--ctp-text) !important;
+  --primary: var(--ctp-mauve) !important;
+  --primary-foreground: var(--ctp-crust) !important;
+  --primary-hover: var(--ctp-lavender) !important;
+  --primary-subtle: var(--ctp-surface0) !important;
+  --primary-subtle-foreground: var(--ctp-mauve) !important;
+  --secondary: var(--ctp-surface0) !important;
+  --secondary-foreground: var(--ctp-text) !important;
+  --muted: var(--ctp-mantle) !important;
+  --muted-foreground: var(--ctp-subtext0) !important;
+  --accent: var(--ctp-surface0) !important;
+  --accent-foreground: #ffffff !important;
+  --destructive: var(--ctp-red) !important;
+  --destructive-foreground: var(--ctp-crust) !important;
+  --destructive-hover: var(--ctp-maroon) !important;
+  --destructive-subtle: #45222e !important;
+  --destructive-subtle-foreground: var(--ctp-red) !important;
+  --border: var(--ctp-surface1) !important;
+  --input: var(--ctp-surface1) !important;
+  --control: var(--ctp-mantle) !important;
+  --control-foreground: var(--ctp-text) !important;
+  --control-hover: var(--ctp-surface0) !important;
+  --well: var(--ctp-mantle) !important;
+  --well-foreground: var(--ctp-subtext0) !important;
+  --highlight: var(--ctp-mauve) !important;
+  --ring: var(--ctp-mauve) !important;
+  --info: var(--ctp-blue) !important;
+  --link: var(--ctp-blue) !important;
+  --link-hover: var(--ctp-lavender) !important;
+  --error: var(--ctp-red) !important;
+  --success: var(--ctp-green) !important;
+  --success-subtle: #1c352d !important;
+  --success-subtle-foreground: var(--ctp-green) !important;
+  --divider: var(--ctp-surface0) !important;
+  --overlay: rgba(17, 17, 27, 0.85) !important;
+  --cover-scrim: linear-gradient(to top, rgba(17, 17, 27, 0.96) 0%, rgba(24, 24, 37, 0.75) 45%, transparent 100%) !important;
+
+  scrollbar-color: var(--ctp-surface1) var(--ctp-mantle) !important;
+  scrollbar-width: thin !important;
+}

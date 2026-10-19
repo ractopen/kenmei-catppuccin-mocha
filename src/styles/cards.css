@@ -1,0 +1,73 @@
+.the-dashboard-grid ul.entries-grid > li,
+.the-dashboard-grid .card,
+.cover {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface0) !important;
+  box-shadow: 2px 2px 0 0 var(--ctp-crust) !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+.the-dashboard-grid ul.entries-grid > li:hover,
+.the-dashboard-grid .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ctp-mauve) !important;
+  box-shadow: 0 -2px 0 0 var(--ctp-mauve), 0 2px 0 0 var(--ctp-mauve), -2px 0 0 0 var(--ctp-mauve), 2px 0 0 0 var(--ctp-mauve), 3px 3px 0 0 var(--ctp-crust) !important;
+}
+
+.card-cover-container img,
+.cover img,
+img.object-cover {
+  border-bottom: 1px solid var(--ctp-surface0) !important;
+}
+
+.cover-caption,
+.card-title {
+  font-family: "Minecraft", "Fira Code", monospace !important;
+  color: #ffffff !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+  text-shadow: 1px 1px 0 var(--ctp-crust), -1px -1px 0 var(--ctp-crust), 1px -1px 0 var(--ctp-crust), -1px 1px 0 var(--ctp-crust) !important;
+}
+
+.status-indicator,
+.badge--chapter,
+[data-slot="badge"] {
+  background-color: var(--ctp-crust) !important;
+  border: 1px solid var(--ctp-mauve) !important;
+  color: var(--ctp-mauve) !important;
+  font-family: "Minecraft", monospace !important;
+  font-size: 11px !important;
+  box-shadow: 1px 1px 0 0 var(--ctp-mantle) !important;
+  padding: 1px 6px !important;
+}
+
+.status-indicator:has(.status-icon) {
+  background-color: var(--ctp-crust) !important;
+  border: 1px solid var(--ctp-green) !important;
+  color: var(--ctp-green) !important;
+}
+
+.status-icon {
+  color: var(--ctp-green) !important;
+}
+
+.info-badge,
+.score-badge {
+  background-color: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-peach) !important;
+  font-family: "Minecraft", monospace !important;
+  font-size: 11px !important;
+}
+
+.the-dashboard-list li,
+.list-row-grid {
+  background-color: var(--ctp-mantle) !important;
+  border-bottom: 1px solid var(--ctp-surface0) !important;
+  transition: background-color 0.1s ease;
+}
+
+.the-dashboard-list li:hover,
+.list-row-grid:hover {
+  background-color: var(--ctp-surface0) !important;
+}
